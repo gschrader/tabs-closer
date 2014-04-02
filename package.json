@@ -8,7 +8,7 @@
     "tabs-closer:close-saved-tabs",
     "tabs-closer:close-all-tabs"
   ],
-  "repository": "https://github.com/atom/tabs-closer",
+  "repository": "https://github.com/gschrader/tabs-closer",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
