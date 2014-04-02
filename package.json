@@ -1,0 +1,18 @@
+{
+  "name": "tabs-closer",
+  "main": "./lib/tabs-closer",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "activationEvents": [
+    "tabs-closer:close-unmodified-tabs",
+    "tabs-closer:close-saved-tabs",
+    "tabs-closer:close-all-tabs"
+  ],
+  "repository": "https://github.com/atom/tabs-closer",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+  }
+}
