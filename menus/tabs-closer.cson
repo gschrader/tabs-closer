@@ -2,5 +2,3 @@
 'context-menu':
   '.tab':
     'Close Unmodified Tabs': 'tabs-closer:close-unmodified-tabs'
-    'Close Saved Tabs': 'tabs-closer:close-saved-tabs'
-    'Close All Tabs': 'tabs-closer:close-all-tabs'
