@@ -1,7 +1,7 @@
 {
   "name": "tabs-closer",
   "main": "./lib/tabs-closer",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "Adds more context menus for closing tabs",
   "activationEvents": [
     "tabs-closer:close-unmodified-tabs",
