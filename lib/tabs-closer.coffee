@@ -6,14 +6,14 @@ module.exports =
     atom.workspaceView.command 'tabs-closer:close-unmodified-tabs', => @closeUnmodifiedTabs()
 
   getTabs: ->
-    atom.workspaceView.find('.tab').toArray().map (elt) -> $(elt).view()
+    atom.workspace.getTextEditors()
 
   closeTab: (tab) ->
-    pane = atom.workspaceView.getActivePane()
-    pane.destroyItem(tab.item)
+    pane = atom.workspace.getActivePane()
+    pane.destroyItem(tab)
 
   closeUnmodifiedTabs: ->
     repo = atom.project.getRepo()
     if repo?
       tabs = @getTabs()
-      @closeTab tab for tab in tabs when tab.item.constructor.name is 'Editor' and not repo.isPathModified(tab.item.getPath()) and not repo.isPathNew(tab.item.getPath())
+      @closeTab tab for tab in tabs when tab.constructor.name is 'TextEditor' and not repo.isPathModified(tab.getPath()) and not repo.isPathNew(tab.getPath())
