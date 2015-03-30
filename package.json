@@ -3,6 +3,11 @@
   "main": "./lib/tabs-closer",
   "version": "0.8.0",
   "description": "Adds more context menus for closing tabs",
+  "keywords": [
+    "tabs",
+    "git",
+    "ui"
+  ]
   "activationEvents": [
     "tabs-closer:close-unmodified-tabs",
     "tabs-closer:close-saved-tabs",
