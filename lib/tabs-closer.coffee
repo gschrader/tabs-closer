@@ -1,9 +1,7 @@
-{$, View} = require 'atom'
-
 module.exports =
 
   activate: (state) ->
-    atom.workspaceView.command 'tabs-closer:close-unmodified-tabs', => @closeUnmodifiedTabs()
+    atom.commands.add "atom-workspace", 'tabs-closer:close-unmodified-tabs', => @closeUnmodifiedTabs()
 
   getTabs: ->
     atom.workspace.getTextEditors()

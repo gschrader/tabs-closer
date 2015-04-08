@@ -8,11 +8,11 @@
     "git",
     "ui"
   ],
-  "activationEvents": [
-    "tabs-closer:close-unmodified-tabs",
-    "tabs-closer:close-saved-tabs",
-    "tabs-closer:close-all-tabs"
-  ],
+  "activationCommands" : {
+      "atom-workspace" : [
+          "tabs-closer:close-unmodified-tabs"
+      ]
+  },
   "repository": "https://github.com/gschrader/tabs-closer",
   "license": "MIT",
   "engines": {
