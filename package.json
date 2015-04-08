@@ -1,17 +1,17 @@
 {
   "name": "tabs-closer",
   "main": "./lib/tabs-closer",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "description": "Adds more context menus for closing tabs",
   "keywords": [
     "tabs",
     "git",
     "ui"
   ],
-  "activationCommands" : {
-      "atom-workspace" : [
-          "tabs-closer:close-unmodified-tabs"
-      ]
+  "activationCommands": {
+    "atom-workspace": [
+      "tabs-closer:close-unmodified-tabs"
+    ]
   },
   "repository": "https://github.com/gschrader/tabs-closer",
   "license": "MIT",
