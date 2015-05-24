@@ -11,7 +11,7 @@ module.exports =
     pane.destroyItem(tab)
 
   closeUnmodifiedTabs: ->
-    repo = atom.project.getRepo()
+    repo = atom.project.getRepositories()[0]
     if repo?
       tabs = @getTabs()
       @closeTab tab for tab in tabs when tab.constructor.name is 'TextEditor' and not repo.isPathModified(tab.getPath()) and not repo.isPathNew(tab.getPath())
