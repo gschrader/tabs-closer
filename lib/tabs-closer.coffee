@@ -10,8 +10,10 @@ module.exports =
     pane = atom.workspace.getActivePane()
     pane.destroyItem(tab)
 
+  tabInRepo: (tab, repo) ->
+      tab.getPath().indexOf(repo.getWorkingDirectory()) == 0
+
   closeUnmodifiedTabs: ->
-    repo = atom.project.getRepositories()[0]
-    if repo?
-      tabs = @getTabs()
-      @closeTab tab for tab in tabs when tab.constructor.name is 'TextEditor' and not repo.isPathModified(tab.getPath()) and not repo.isPathNew(tab.getPath())
+    tabs = @getTabs()
+    for repo in atom.project.getRepositories()
+      @closeTab tab for tab in tabs when tab.constructor.name is 'TextEditor' and @tabInRepo(tab, repo) and not repo.isPathModified(tab.getPath()) and not repo.isPathNew(tab.getPath())
