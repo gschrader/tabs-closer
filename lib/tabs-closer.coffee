@@ -11,7 +11,7 @@ module.exports =
     pane.destroyItem(tab)
 
   tabInRepo: (tab, repo) ->
-      tab.getPath().indexOf(repo.getWorkingDirectory()) == 0
+      repo? and tab.getPath().indexOf(repo.getWorkingDirectory()) == 0
 
   closeUnmodifiedTabs: ->
     tabs = @getTabs()
